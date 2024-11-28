@@ -27,6 +27,14 @@ class User extends Authenticatable
         'email',
         'phone_number',
         'password',
+        'address',
+        'country',
+        'state',
+        'city',
+        'pincode',
+        'branch_id',
+        'profile_picture',
+        'role',
     ];
     /**
      * The attributes that should be hidden for serialization.
@@ -57,6 +65,25 @@ class User extends Authenticatable
     {
         return $this->hasOne(Setting::class, 'user_id','id'); 
     }
+    public function branch()
+{
+    return $this->belongsTo(Branch::class, 'branch_id' );
+}
+public function country()
+    {
+        return $this->belongsTo(Country::class, 'country', 'id');
+    }
+
+    public function state()
+    {
+        return $this->belongsTo(State::class, 'state', 'id');
+    }
+
+    public function city()
+    {
+        return $this->belongsTo(City::class, 'city', 'id');
+    }
+
 }
 
 

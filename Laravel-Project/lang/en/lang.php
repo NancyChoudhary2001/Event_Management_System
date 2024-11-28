@@ -25,6 +25,20 @@ return [
     'resetPassword' => 'Reset Password',
     'confirmPassword' => 'Confirm Password',
     'reset' => 'Reset',
+    'home' => 'Home',
+    'footerCopyright'=> 'Copyright',
+    'footerYear'=> '2024',
+    'footerContent' => 'All rights reserved.',
+    'user' => 'Users',
+    'branch' => 'Branch',
+    'event' => 'Event',
+    'dashboard' => 'Dashboard',
+    'cmdlte' => 'Confirm Delete',
+    'cmdlteLine' => 'Are you sure you want to delete this user?',
+    'cancel' => 'Cancel',
+    'delete' => 'Delete',
+    'action' => 'Actions',
+
 
 ]
 ?>

@@ -96,7 +96,7 @@
         function checkInputs() {
             let isValid = true;
             const emailValue = $('#email').val().trim();
-            const email = $('#email')[0]; // Reference to the email input field
+            const email = $('#email')[0]; 
             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
             if (emailValue === "") {

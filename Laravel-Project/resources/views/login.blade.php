@@ -77,7 +77,7 @@
     </div>
 
     <script>
-        // Password visibility toggle
+        
         $('#togglePassword').on('click', function() {
             const passwordField = $('#password');
             const eyeIcon = $('#eyeIcon');
@@ -112,7 +112,8 @@
                     }),
                     success: function(response) {
                         alert('succes');
-                        window.location.href = "{{ route('signup')}}";
+                        window.location.href =  "{{env('APP_URL')}}/index";
+                        // window.location.href = "{{ route('index')}}";
                     },
                     error:function(xhr) {
                         if(xhr.responseJSON && xhr.responseJSON.errors){
@@ -128,12 +129,12 @@
                         `<button type="button" class="btn btn-close btn-xs close_button float-end"></button>`
                     ).show();
 
-                    // Hide alert after 3 seconds
+                   
                     setTimeout(function () {
                         $('#error-alert').hide().empty();
                     }, 3000);
 
-                    // Close the alert when the close button is clicked
+                    
                     $('.close_button').click(function() {
                         $('#error-alert').hide().empty();
                     });

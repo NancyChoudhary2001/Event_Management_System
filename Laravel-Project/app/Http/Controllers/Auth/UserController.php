@@ -66,6 +66,7 @@ class UserController extends Controller
                 'email' => $request->email,
                 'phone_number' => $request->phonenumber,
                 'password' => $password,
+                'role' => $request->role ?? 'user',
             ]);
             
             $fullname = $request->firstname . ' ' . $request->lastname;
@@ -96,11 +97,12 @@ class UserController extends Controller
             // dd($language);  
             if(Auth::attempt(['email'=>$request->email,'password'=> $request->password])){
                 $authUser = Auth::user();
+                // dd($authUser);
                 return response()->json([
                     'status' => true,
                     'message' => 'User Logged in Successfully',
-                    'token' => $authUser->createToken("API Token")->plainTextToken,
-                    'tokn_type' => 'bearer',
+                    // 'token' => $authUser->createToken("API Token")->plainTextToken,
+                    // 'tokn_type' => 'bearer',
                 ],200); 
             } 
                 return response()->json([

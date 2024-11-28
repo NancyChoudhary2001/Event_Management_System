@@ -25,6 +25,19 @@ return [
     'resetPassword' => 'Réinitialiser le mot de passe',
     'confirmPassword' => 'Confirmez le mot de passe',
     'reset' => 'Réinitialiser',
+    'home' => 'Maison',
+    'footerCopyright'=> "Droit d'auteur",
+    'footerYear'=> '2024',
+    'footerContent' => 'Tous droits réservés.',
+    'user' => 'Utilisateur',
+    'branch' => 'Bifurquer',
+    'event' => 'EvÉvénementent',
+    'dashboard' => 'Tableau de bord',
+    'cmdlte' => 'Confirmer la suppression',
+    'cmdlteLine' => 'Êtes-vous sûr de vouloir supprimer cet utilisateur ?',
+    'cancel' => 'Annuler',
+    'delete' => 'Supprimer',
+    'action' => 'Actes',
 
 
 ]

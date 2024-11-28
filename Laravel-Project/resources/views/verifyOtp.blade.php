@@ -63,19 +63,19 @@
     event.preventDefault();
 
     const otpValue = $('#otp').val().trim();
-    const emailValue = $('#email').val();  // Get email from hidden input
+    const emailValue = $('#email').val();  
 
     const isValid = checkInputs();
     if (isValid) {
         $.ajax({
-            url: '/api/verifyOtp',  // Ensure the URL is correct for your API
+            url: '/api/verifyOtp',  
             type: 'POST',
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             contentType: 'application/json',
             data: JSON.stringify({
-                email: emailValue,   // Pass emailValue
+                email: emailValue,   
                 otp: otpValue
             }),
             success: function(response) {
